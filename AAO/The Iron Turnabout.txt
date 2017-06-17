@@ -1,0 +1,44 @@
+[#pXX timers]
+75 = Smooth Scroll
+40 = Short Comma/Period Pause
+50 = Long Comma/Period Pause
+
+[Wait Timers]
+1000 = 1 second, fades
+2000 = 2 second black frame
+100 = Pre-Witness Testimony graphic frame
+3004 = Witness Testimony
+600 = HOLD IT/OBJECTION/TAKE THAT
+750 = Smooth Scrollin'
+
+[Basic Summary]
+Train No. 904 is approaching the station at ~4 PM on track 5. Suddenly, the train was unexpectedly switched from track 5 to track 6. Train No. 582 was sitting at the platform on track 6. Train No. 904 had about 2000 feet to try to stop. Brakes were applied excessively 1600 feet from the end of Train No. 582. Brakes failed, and the train crashed.
+
+[Pre-Trial Story Summary]
+Arto Matik and K.C. Jones were both colleagues working at Metrolink. One day, out of the blue, Jones was promoted to a higher position as an engineer, and Matik was demoted to a maintenance man. Jones we constantly receive praise and raises, and he even began to mock Matik. This led to Matik slowly grow resentment towards Jones and Metrolink.
+
+He worked hard as a maintenance man, and learned the ins and outs of the rolling stock. One day, he managed to save a fellow worker from near-death, and was praised for it with a pay raise and an offer for a promotion to a dispatcher. Matik, having had a long passion for autonomous systems, took the promotion. Despite this, he still held a grudge against the company and Jones.
+
+One day, he devised a plan. He would position a metal bar in a certain fasion on the tracks in such a way that when a train passed over it, the bar would cut through the ATS wiring if it hung low, and knock a valve handle that would cut air flow in the braking system between the engine and the rest of the train. Normally, no one would know about all these little tips. However, Matik had worked for quite a while as a maintenance man, and he learned all the bits and pieces in and around the locomotives and train cars.
+
+Matik had acquired information that Jones would be operating No. 904 on the day of the accident, and he put his plan into action. The night before, he snuck into the maintenance facility where the locomotive that would be used for the next day's Train 904 was being kept. Maintenance for most of the engines had been completed for the night, so most of the maintenance men had gone for the evening, while a handful of others worked on the last locomotive. This made it possible for Matik to sneak in without detection. He went into a special walkway under the locomotive and reached up to adjust the ATS wiring. He knew he had to make the cable hang low -- but not too low. Had it been too low, a plug in the system might have been pulled out, which would set off an alarm when the engine was started the next day. He pulled it down just enough so the metal bar would be able to slice through the cables.
+
+Next, he attached a piece of metal to the air brake valves. When hit by the metal bar, the piece of metal would be rotated. This rotational force would turn the brake valves in the closed position, cutting off air brake inputs to the rest of the train. At this point, Matik was finished, and he walked away undetected.
+
+Early in the morning the next day, he went up into the dispatching tower where he usually worked. He programmed the routing system on Will Warry's computer (Will forgot to log out) to automatically change switch points during the time when Jones' train was exepected to enter the station. Matik didn't have to worry about the possibility of the train being late; Jones was well-known for keeping up with the schedule to a T. After he finished that, he exited the facility to grab some breakfast and extra sleep.
+
+He returned the next day during the early afternoon (~1 PM), for work, obviously. He left at around 3:30, claiming that he was going to grab a quick late lunch that day. He placed the metal bar in position on track 5, where the train would strike it before getting switched onto track 6. He came back with a to-go bag from King Burger (top kek right) to make it seem as if he actually left to get a lunch, and he was hungry anyway.
+
+He heard Train No. 904 approach in the distance. He casually took out the burger and ate it while watching the engine roar by through the window. The engine passed Mayntin, where he and Jones exchanged waves. The clang sound Mayntin hears is the sound of the metal bar hitting the piece of metal attached to the air brake valves. The bar is found bent at the tip after the bar was struck by something else insignificant (to this case) and fell over. The train gets switched onto Track 6. ATS would typically have stopped the train, but the wires were cut by the metal bar, disabling the system. Jones never noticed the error in the cab because he was too distracted by the wave with Mayntin, and more importantly, the suddenly switching of tracks that happened right after. He realizes that there's another train on the track ahead, and tries to apply the emergency brakes. As we know, the air brake valve was shut, so the brakes were not applied on the entire train except for the locomotive (the locomotive itself does not provide enough braking power). Crash is inevitable.
+
+[Day 1 - Trial]
+-Case is presented.
+-Gumshoe will testify the run-down of the initial case. ezpz lemon squeezy press everything CE.
+-Mayntin will be called to testify what he saw and heard (the metal bar)
+--
+
+[Evidence/Court Record]
+Autopsy Report - 
+
+[Ideas]
+-Broken ATO, sabotaged brakes caused crash

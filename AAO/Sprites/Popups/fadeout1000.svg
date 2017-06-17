@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg>
+<svg width="256" height="192" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<rect fill="black" x="0" y="0" width="256" height="192">
+		<animate attributeName="opacity" from="0" to="1" dur="1000ms" fill="freeze"/>
+	</rect>
+</svg>
