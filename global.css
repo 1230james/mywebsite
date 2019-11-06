@@ -1,6 +1,21 @@
-html * /* Global; applies to everything */
-{
+html * { /* Global; applies to everything */
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* lol nothing here yet */
+/* Header text */
+header {
+    line-height: 50%;
+    text-align: center;
+}
+header h1 {
+    font-family: 'Acme', Arial, Helvetica, sans-serif;
+}
 
+/* Nav bar */
+nav {
+    margin: auto;
+    width: 100%;
+	display: inline-block;
+	border-right: 2px solid #999999;
+    text-align: center;
 }
