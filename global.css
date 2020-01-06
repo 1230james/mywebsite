@@ -20,8 +20,8 @@ nav {
     text-align: center;
 }
 
-/* Sections */
-section {
+/* Sections & Horizontal Lines */
+section, hr {
     margin: auto;
     width: 50%;
 }
