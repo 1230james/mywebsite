@@ -1,8 +1,9 @@
+var sep = "<b><b>|</b></b>";
 $("#navbar").html(`
-    <a href="">Home</a>
-    <a href="">About Me</a>
-    <a href="">Half Past Noon</a>
-    <a href="">Programming Projects</a>
-    <a href="">Sheet Music</a>
+    <a href="">Home</a> ${sep}
+    <a href="">About Me</a> ${sep}
+    <a href="">Half Past Noon</a> ${sep}
+    <a href="">Programming Projects</a> ${sep}
+    <a href="">Sheet Music</a> ${sep}
     <a href="">Contact</a>
 `);
