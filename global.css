@@ -1,7 +1,10 @@
 /* Global/Primary CSS sheet */
 
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap');
+
 html * { /* Global; applies to everything */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
 /* Header text */
@@ -20,6 +23,12 @@ nav {
 	display: inline-block;
 	border-right: 2px solid #999999;
     text-align: center;
+}
+
+/* Body */
+body {
+    background-color: #eee; /* uhhh nobody will kill me for straying from the 216-color palette in 2020 right? */
+    color: #444; /* Japan be like "yo what" */
 }
 
 /* Sections & Horizontal Lines */
