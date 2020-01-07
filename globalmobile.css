@@ -1,0 +1,9 @@
+/* Global CSS sheet for mobile devices/small browser windows */
+
+@import "global.css" screen; /* Use the rules from the main sheet; use this sheet only to override what needs to be changed */
+
+/* Sections & Horizontal Lines */
+section, hr {
+    margin: auto;
+    width: 75%;
+}

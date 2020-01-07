@@ -1,3 +1,5 @@
+/* Global/Primary CSS sheet */
+
 html * { /* Global; applies to everything */
     font-family: Arial, Helvetica, sans-serif;
 }
