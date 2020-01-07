@@ -1,27 +1,36 @@
 // Navigation Bar & Seamless page loading
+"use strict";
 
 const sep = "<b><b>|</b></b>";
-var navlinks;
-$.getJSON("/navlinks.json", function(data) {
-   console.log(data); 
-});
+const navlinks = {
+    "Home": "/",
+    "About Me": "/",
+    "Half Past Noon": "/",
+    "Programming Projects": "/",
+    "Sheet Music": "/",
+    "Contact": "/",
+}
 
 // Run on ready
 $(document).ready(function() {
     // Create nav links
     let str = "";
     for (let text in navlinks) {
-        str += "<a href=\"" + navlinks[text] + "\">" + text + "</a> ${sep} ";
+        str += `<a href="${navlinks[text]}">${text}</a> ${sep} `;
     }
     $("#navbar").html(str);
     
     // Bind them
     $("#navbar").children().each(function(i,e) {
-        history.pushState({ path: this.path }, '', this.href);
-        $.get(this.href, function(data) {
-            console.log(data);
-        });
-        return false;
+        if (navlinks[e.innerText] != null) {
+            e.onclick = function() {
+                history.pushState({ path: this.path }, '', this.href);
+                $.get(this.href, function(data) {
+                    console.log(data);
+                });
+                return false;
+            };
+        }
     });
 });
 
