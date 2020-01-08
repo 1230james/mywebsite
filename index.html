@@ -3,53 +3,57 @@
 
 <head>
     <title>1230james's Website</title>
-    <link rel="stylesheet" media="screen and (min-width: 761px)" type="text/css" href="global.css">
-    <link rel="stylesheet" media="screen and (max-width: 760px)" type="text/css" href="globalmobile.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 761px)" type="text/css" href="global.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 760px)" type="text/css" href="globalmobile.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<header>
-    <h1>1230james's Website<h1>
-    <h2>By James Hyun</h2>
-</header>
-
-<nav id="navbar">
-    <script src="navigation.js"></script>
-</nav>
-
 <body>
-    <section>
-        <h2 class="textcenter">Welcome!</h2>
-        <p>&emsp;Welcome to <b>1230james's Website</b>! My name is James Hyun, a college undergraduate majoring in computer science who likes to program and do some other niche things.</p>
-        <p>This website is intended to serve as an online "portfolio" where I can show off the things I want to share to anyone who passes by, from online acquaintances to potential employers to family members.</p>
-        <p>View the links in the navigation bar above to see and learn more about who I am and what I do.</p>
-        <p class="textcenter"><i>This website is still a <strong>work-in-progress!</strong></i></p>
-    </section>
-    <hr>
-    <section>
-        <h2 class="textcenter">Pages to Visit</h3>
-        <p>&emsp;<strong>Are you an employer?</strong> Please feel free to browse any page here, but for personal details, see the <a href="">About Me</a> page, and for code samples, visit the <a href="">Programming Projects</a> page. For privacy concerns, a copy of my résumé is not available through this site, but you may request a copy by <a href="">contacting me</a>.</p>
-        
-        <p>&emsp;<strong>Are you here because of the games or other programs I've made?</strong> Visit <a href="">Half Past Noon</a> for my primary game development endeavor, or see <a href="">Programming Projects</a> for my non-HPN-related projects, such as my Discord bots.</p>
-        
-        <p>&emsp;<strong>Are you here for sheet music?</strong> This website is the new home for <i>James's Sheet Music</i> (or <i>JHSheetMusic</i>)! All sheet music-related information, including downloads, can be accessed through the <a href="">Sheet Music</a> page.</p>
-        
-        <p>&emsp;<strong>Not here for any of those?</strong> That's okay. Thanks for stopping by anyway!</p>
-    </section>
-    <hr>
-    <section>
-        <h2 class="textcenter">Javadocs</h2>
-        <p class="textcenter"><em>Temporary location of links to my public Javadocs.</em></p>
-        <ul>
-            <li><a href="/javadocs/javafarmer">HPN JavaFarmer</a></li>
-        </ul>
-    </section>
-</body>
+    <div id="headernav">
+        <header>
+            <h1>1230james's Website</h1>
+            <h2>By James Hyun</h2>
+        </header>
 
-<footer>
-    <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
-</footer>
+        <nav id="navbar">
+            <script src="navigation.js"></script>
+        </nav>
+    </div>
+    
+    <div id="content">
+        <section>
+            <h2 class="textcenter">Welcome!</h2>
+            <p class="indent">Welcome to <b>1230james's Website</b>! My name is James Hyun, a college undergraduate majoring in computer science who likes to program and do some other niche things.</p>
+            <p>This website is intended to serve as an online "portfolio" where I can show off the things I want to share to anyone who passes by, from online acquaintances to potential employers to family members.</p>
+            <p>View the links in the navigation bar above to see and learn more about who I am and what I do.</p>
+            <p class="textcenter"><i>This website is still a <strong>work-in-progress!</strong></i></p>
+        </section>
+        <hr/>
+        <section>
+            <h2 class="textcenter">Pages to Visit</h2>
+            <p class="indent"><strong>Are you an employer?</strong> Please feel free to browse any page here, but for personal details, see the <a href="">About Me</a> page, and for code samples, visit the <a href="">Programming Projects</a> page. For privacy concerns, a copy of my résumé is not available through this site, but you may request a copy by <a href="">contacting me</a>.</p>
+            
+            <p class="indent"><strong>Are you here because of the games or other programs I've made?</strong> Visit <a href="">Half Past Noon</a> for my primary game development endeavor, or see <a href="">Programming Projects</a> for my non-HPN-related projects, such as my Discord bots.</p>
+            
+            <p class="indent"><strong>Are you here for sheet music?</strong> This website is the new home for <i>James's Sheet Music</i> (or <i>JHSheetMusic</i>)! All sheet music-related information, including downloads, can be accessed through the <a href="">Sheet Music</a> page.</p>
+            
+            <p class="indent"><strong>Not here for any of those?</strong> That's okay. Thanks for stopping by anyway!</p>
+        </section>
+        <hr/>
+        <section>
+            <h2 class="textcenter">Javadocs</h2>
+            <p class="textcenter"><em>Temporary location of links to my public Javadocs.</em></p>
+            <ul>
+                <li><a href="/javadocs/javafarmer">HPN JavaFarmer</a></li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
+    </footer>
+</body>
 
 </html>

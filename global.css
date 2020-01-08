@@ -22,11 +22,7 @@ body a:hover { color: #999 }
 /* Header text */
 header {
     line-height: 50%;
-    text-align: center;
-    background-color: #444;
-    color: #eee;
-    padding: 3px 0px;
-    width: 100%;
+    padding: 1px 0px;
 }
 header h1 {
     font-family: 'Acme', Arial, Helvetica, sans-serif;
@@ -35,14 +31,18 @@ header h1 {
 /* Nav bar */
 nav {
     margin: auto;
-    padding: 5px 0px 8px 0px;
-    width: 100%;
+    padding: 0px 0px 5px 0px;
 	display: inline-block;
-    text-align: center;
-    position: sticky;
-    top: 0;
+}
+
+/* Header & Nav bar combined */
+#headernav {
     background-color: #444;
     color: #eee;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
 /* Body */
@@ -65,4 +65,9 @@ footer {
 /* Class for centered text */
 .textcenter {
     text-align: center;
+}
+
+/* Class for indented paragraphs */
+.indent {
+    text-indent: 1em;
 }
