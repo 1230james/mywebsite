@@ -10,8 +10,15 @@ body {
     padding:0;
 }
 
-html * { /* Global; applies to everything */
+/* Global; applies to everything */
+html * {
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #eee; /* uhhh nobody will kill me for straying from the 216-color palette in 2020 right? */
+    color: #444; /* Japan be like "yo what" */
 }
 
 /* a (Hyperlinks) */
@@ -45,10 +52,11 @@ nav {
     text-align: center;
 }
 
-/* Body */
-body {
-    background-color: #eee; /* uhhh nobody will kill me for straying from the 216-color palette in 2020 right? */
-    color: #444; /* Japan be like "yo what" */
+/* Big h2 */
+h2.big {
+    font-size: 300%;
+    line-height: 50%;
+    text-decoration: underline;
 }
 
 /* Sections & Horizontal Lines */

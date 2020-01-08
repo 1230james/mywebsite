@@ -16,7 +16,7 @@ const navlinks = {
     "Contact": "/contact",
 }
 var debounce = false
-var currentPath = location.pathname;
+var currentPath;
 
 // Run on ready
 $(document).ready(function() {
@@ -26,17 +26,18 @@ $(document).ready(function() {
         str += `<a href="${navlinks[text]}">${text}</a> ${sep} `;
     }
     $("#navbar").html(str);
+    currentPath = location.pathname;
     
-    // Bind them
-    $("#navbar").children().each(function(i,e) {
-        if (navlinks[e.innerText] != null) {
-            e.onclick = function() {
+    // Bind 
+    $("a").each(function(i,e) {
+        e.onclick = function() {
+            if (isLocalURL(e.hostname)) {
                 if (debounce) return false;
                 history.pushState({}, '', navlinks[e.innerText]);
                 loadPage();
                 return false;
-            };
-        }
+            } else return true;
+        };
     });
     
     $(window).bind('popstate', function() {
@@ -69,3 +70,7 @@ function loadPage() {
     
 }
 
+// Check whether hostname is local or external
+function isLocalURL(hostname) {
+    return (location.hostname == hostname || hostname.length < 1);
+}
