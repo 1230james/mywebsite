@@ -33,7 +33,7 @@ $(document).ready(function() {
     $("a").each(function(i,e) {
         e.onclick = function() {
             if (isLocalAnchor(e)) {
-                if (debounce) return false;
+                if (debounce) return false; else debounce = true;
                 history.pushState({}, '', navlinks[e.innerText]);
                 loadPage();
                 return false;
@@ -42,34 +42,41 @@ $(document).ready(function() {
     });
     
     $(window).bind('popstate', function() {
-        loadPage(location.pathname);
+        if (debounce) {
+            loadContent();
+        } else {
+            debounce = true;
+            loadPage();
+        }
     });
 });
 
 // Load page (incl. animations)
 function loadPage() {
-    
-    // Debounce + Same page check (return if the page is the same)
-    if (debounce || location.pathname == currentPath) return;
-    else debounce = true; 
-    
-    let content = $("#content");
+    // Same page check (return if the page is the same)
+    if (location.pathname == currentPath) return;
     
     // "Unload" animation
-    content.animate({paddingTop: "+=300px", opacity: "0"}, animationTime, "swing", function() {
+    $("#content").animate({paddingTop: "+=300px", opacity: "0"}, animationTime, "swing", function() {
         setTimeout(function() {
-            // Update page
-            currentPath = location.pathname; // Load new content
-            content.load(currentPath + " #content");
-            $("title").load(currentPath + " title"); // Load new title
-            document.title = $("title").innerHTML;
+            loadContent();
             // Load animation
-            content.animate({paddingTop: "-=300px", opacity: "1"}, animationTime, "swing", function() {
+            $("#content").animate({paddingTop: "-=300px", opacity: "1"}, animationTime, "swing", function() {
                 debounce = false;
             });
         }, timeBetweenAnim);
     });
-    
+}
+
+// Load content
+function loadContent() {
+    // Load new content
+    currentPath = location.pathname;
+    $("#content").load(currentPath + " #content >");
+    // Load new title
+    $.get(currentPath, function(html) {
+        $("title").html($(html).find("title").html());
+    });
 }
 
 // Check whether hostname is local or external
@@ -81,7 +88,6 @@ function isLocalAnchor(element) {
 
 // Fix some links for offline testing
 function fixLinks() {
-    console.log("Fixing links");
     if (location.protocol == "file:") {
         let path = location.pathname;
         path = path.substring(0,path.lastIndexOf("/"));
