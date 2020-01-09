@@ -37,7 +37,7 @@ $(document).ready(function() {
                 history.pushState({}, '', navlinks[e.innerText]);
                 loadPage();
                 return false;
-            } else return false; // true; UNCOMMENT WHEN FINISHED WITH TESTING
+            } else return true;
         };
     });
     
