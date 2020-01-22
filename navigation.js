@@ -103,6 +103,7 @@ function loadContent() {
 function isLocalAnchor(element) {
     if (element.rel == "external") return false;
     let hostname = element.hostname;
+    console.log(hostname);
     return (location.hostname == hostname || hostname.length < 1);
 }
 
