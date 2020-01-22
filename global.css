@@ -86,6 +86,11 @@ footer {
 }
 
 /* Class for lists on Programming Projects page */
-.projectlist > li {
+.projectlist:first-child {
     font-weight: bold;
+}
+
+/* Class for list items to not show bullet point */
+.nobullet {
+    list-style-type: none;
 }
