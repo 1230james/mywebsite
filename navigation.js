@@ -79,8 +79,10 @@ function loadPage() {
 function loadContent() {
     // Load new content
     currentPath = location.pathname;
-    $("#content").load(currentPath + " #content >");
-    $("a").each(bindAnchors);
+    $("#content").load(currentPath + " #content >", null, function() {
+        console.log("gabeeeen can we have new weapons please?");
+        $("#content a").each(bindAnchors);
+    });
     // Load new title
     $.get(currentPath, function(html) {
         $("title").html($(html).find("title").html());
@@ -89,6 +91,7 @@ function loadContent() {
 
 // Bind anchors
 function bindAnchors(i,e) {
+    console.log("Binding anchor");
     e.onclick = function() {
         if (isLocalAnchor(e)) {
             history.pushState({}, '', navlinks[e.innerText]);
