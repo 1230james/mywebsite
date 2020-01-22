@@ -65,6 +65,11 @@ section, hr {
     width: 50%;
 }
 
+/* Content */
+#content {
+    /* If setting padding-top, USE PIXELS! Page transition script expects only pixels. */
+}
+
 /* Footer */
 footer {
     padding-top: 10px;
