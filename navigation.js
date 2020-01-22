@@ -80,7 +80,11 @@ function loadContent() {
     // Load new content
     currentPath = location.pathname;
     $("#content").load(currentPath + " #content >", null, function() {
-        $("#content a").each(bindAnchors);
+        $("#content a").each(bindAnchors); // Bind anchors
+        // If on contact page, handle address munging
+        if ($("#mailto").length) { // If it exists
+            handleAddressMunging();
+        }
     });
     // Load new title
     $.get(currentPath, function(html) {
@@ -109,6 +113,15 @@ function isLocalAnchor(element) {
     if (element.rel == "external") return false;
     let hostname = element.hostname;
     return (location.hostname == hostname || hostname.length < 1);
+}
+
+// Address munging
+function handleAddressMunging() {
+    const naym = "contact1230james"; // Don't tell Garrett or he'll have my head
+    const notAyyTee = "@"; // haha get it
+    const doughMayn1 = "gma";
+    const doughMayn2 = "il.c";
+    document.getElementById("mailto").href = "mai" + "lto:" + naym + notAyyTee + doughMayn1 + doughMayn2 + "om";
 }
 
 // Fix some links for offline testing
