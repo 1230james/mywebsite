@@ -39,20 +39,7 @@ $(document).ready(function() {
     currentPath = location.pathname;
     
     // Bind 
-    $("a").each(function(i,e) {
-        e.onclick = function() {
-            if (isLocalAnchor(e)) {
-                history.pushState({}, '', navlinks[e.innerText]);
-                if (!debounce) {
-                    debounce = true;
-                    loadPage();
-                } else {
-                    return false;
-                }
-                return false;
-            } else return true;
-        };
-    });
+    $("a").each(bindAnchors);
     
     $(window).bind('popstate', function() {
         if (!isUnloadAnimationPlaying) {
@@ -93,17 +80,33 @@ function loadContent() {
     // Load new content
     currentPath = location.pathname;
     $("#content").load(currentPath + " #content >");
+    $("a").each(bindAnchors);
     // Load new title
     $.get(currentPath, function(html) {
         $("title").html($(html).find("title").html());
     });
 }
 
+// Bind anchors
+function bindAnchors(i,e) {
+    e.onclick = function() {
+        if (isLocalAnchor(e)) {
+            history.pushState({}, '', navlinks[e.innerText]);
+            if (!debounce) {
+                debounce = true;
+                loadPage();
+            } else {
+                return false;
+            }
+            return false;
+        } else return true;
+    };
+}
+
 // Check whether hostname is local or external
 function isLocalAnchor(element) {
     if (element.rel == "external") return false;
     let hostname = element.hostname;
-    console.log(hostname);
     return (location.hostname == hostname || hostname.length < 1);
 }
 
