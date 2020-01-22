@@ -84,3 +84,8 @@ footer {
 .indent {
     text-indent: 1em;
 }
+
+/* Class for lists on Programming Projects page */
+.projectlist > li {
+    font-weight: bold;
+}
