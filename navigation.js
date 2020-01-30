@@ -25,8 +25,6 @@ var contentPaddingTopLow;
 
 // Run on ready
 $(document).ready(function() {
-    console.log("Sir!");
-    
     // Set contentPaddingTop values
     contentPaddingTopHigh = $("#content").css("paddingTop");
     contentPaddingTopLow = (parseInt(contentPaddingTopHigh.replace(/\D/g,''))
@@ -98,17 +96,11 @@ function loadContent() {
         }
     });
     // Load new title
-    $.get(currentPath, function(html) {
-        console.log(html);
-        let array = $.parseHTML(html);
-        let newTitle = $(html).title.text;
-        console.log(newTitle);
-        document.title = newTitle;
-    })
-    /*$.get(currentPath, function(html) {
-        $("title").html($(html).find("title").html());
+    $("title").load(currentPath + " title", null, function() {
+        // This algorithm gives me brain damage but at this point I literally can't figure out a different way
+        $("title").html(($("title").html()).substring(7, ($("title").html()).indexOf("</title>")));
         document.title = $("title").html();
-    });*/
+    });
 }
 
 // Bind anchors
