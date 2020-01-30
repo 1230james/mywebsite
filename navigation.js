@@ -5,6 +5,7 @@
 const animationTime = 750;
 const timeBetweenAnim = 250; // only change the number
 const animationDistance = 300; // # of pixels to slide content by when changing page
+const useFancyTransitions = true; // Fade & stuff
 
 // Variables
 const sep = "<b><b>|</b></b>";
@@ -62,17 +63,21 @@ function loadPage() {
     if (location.pathname == currentPath) return;
     
     // "Unload" animation
-    isUnloadAnimationPlaying = true
-    $("#content").animate({paddingTop: contentPaddingTopLow, opacity: "0"}, animationTime, "swing", function() {
-        setTimeout(function() {
-            loadContent();
-            isUnloadAnimationPlaying = false;
-            // Load animation
-            $("#content").animate({paddingTop: contentPaddingTopHigh, opacity: "1"}, animationTime, "swing", function() {
-                debounce = false;
-            });
-        }, timeBetweenAnim);
-    });
+    if (useFancyTransitions) {
+        isUnloadAnimationPlaying = true
+        $("#content").animate({paddingTop: contentPaddingTopLow, opacity: "0"}, animationTime, "swing", function() {
+            setTimeout(function() {
+                loadContent();
+                isUnloadAnimationPlaying = false;
+                // Load animation
+                $("#content").animate({paddingTop: contentPaddingTopHigh, opacity: "1"}, animationTime, "swing", function() {
+                    debounce = false;
+                });
+            }, timeBetweenAnim);
+        });
+    } else {
+        loadContent();
+    }
 }
 
 // Load content
