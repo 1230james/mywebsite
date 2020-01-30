@@ -5,7 +5,7 @@
 const animationTime = 750;
 const timeBetweenAnim = 250; // only change the number
 const animationDistance = 300; // # of pixels to slide content by when changing page
-const useFancyTransitions = true; // Fade & stuff
+const useFancyTransitions = false; // Fade & stuff
 
 // Variables
 const sep = "<b><b>|</b></b>";
@@ -43,16 +43,20 @@ $(document).ready(function() {
     $("a").each(bindAnchors);
     
     $(window).bind('popstate', function() {
-        if (!isUnloadAnimationPlaying) {
-            debounce = true;
-            loadPage();
+        if (useFancyTransitions) {
+            if (!isUnloadAnimationPlaying) {
+                debounce = true;
+                loadPage();
+            } else {
+                setInterval(function() { // Wait until unload anim is done
+                    if (!isUnloadAnimationPlaying) {
+                        clearInterval();
+                        loadContent();
+                    }
+                }, 100);
+            }
         } else {
-            setInterval(function() { // Wait until unload anim is done
-                if (!isUnloadAnimationPlaying) {
-                    clearInterval();
-                    loadContent();
-                }
-            }, 100);
+            loadPage();
         }
     });
 });
@@ -94,6 +98,7 @@ function loadContent() {
     // Load new title
     $.get(currentPath, function(html) {
         $("title").html($(html).find("title").html());
+        document.title = $("title").html();
     });
 }
 
@@ -102,11 +107,15 @@ function bindAnchors(i,e) {
     e.onclick = function() {
         if (isLocalAnchor(e)) {
             history.pushState({}, '', navlinks[e.innerText]);
-            if (!debounce) {
-                debounce = true;
-                loadPage();
+            if (useFancyTransitions) {
+                if (!debounce) {
+                    debounce = true;
+                    loadPage();
+                } else {
+                    return false;
+                }
             } else {
-                return false;
+                loadPage();
             }
             return false;
         } else return true;
@@ -121,8 +130,8 @@ function isLocalAnchor(element) {
 }
 
 // Address munging
-function handleAddressMunging() {
-    const naym = "contact1230james"; // Don't tell Garrett or he'll have my head
+function handleAddressMunging() { // Don't tell Garrett or he'll have my head
+    const naym = "contact1230james"; 
     const notAyyTee = "@"; // haha get it
     const doughMayn1 = "gma";
     const doughMayn2 = "il.c";
