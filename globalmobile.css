@@ -2,8 +2,19 @@
 
 @import "global.css" screen; /* Use the rules from the main sheet; use this sheet only to override what needs to be changed */
 
-/* Sections & Horizontal Lines */
+/* Sections & Horizontal ulnes */
 section, hr {
     margin: auto;
     width: 75%;
+}
+
+/* list idents */
+ul {
+    padding-left: 0px;
+}
+ul ul {
+    padding-left: 20px;
+}
+ul ul ul {
+    padding-left: 40px;
 }
