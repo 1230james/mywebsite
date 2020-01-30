@@ -97,9 +97,15 @@ function loadContent() {
     });
     // Load new title
     $.get(currentPath, function(html) {
+        console.log(html);
+        let newTitle = $(html).find("title").html();
+        console.log(newTitle);
+        document.title = newTitle;
+    })
+    /*$.get(currentPath, function(html) {
         $("title").html($(html).find("title").html());
         document.title = $("title").html();
-    });
+    });*/
 }
 
 // Bind anchors
