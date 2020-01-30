@@ -25,7 +25,7 @@ var contentPaddingTopLow;
 
 // Run on ready
 $(document).ready(function() {
-    console.log("Indubitably!");
+    console.log("Elementary!");
     
     // Set contentPaddingTop values
     contentPaddingTopHigh = $("#content").css("paddingTop");
@@ -101,8 +101,8 @@ function loadContent() {
     $.get(currentPath, function(html) {
         console.log(html);
         let array = $.parseHTML(html);
-        console.log(array);
         let newTitle = $(html).find("title").html();
+        console.log($(html));
         console.log(newTitle);
         document.title = newTitle;
     })
