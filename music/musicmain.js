@@ -8,12 +8,13 @@ $.get("musiclist.json",null,function(data) {
 }, "json");
 /* Template for one entry in musicList
 {
-    name: "SongName",
-    origin: "SongOrigin",
-    icon: "IconPath",
-    desc: "Description",
-    meta: "MetaText",
-    archive: "ArchivePath"
+    name: "Name of song",
+    origin: "Name of origin of song",
+    icon: "path/to/the/icon.png",
+    desc: "Description of the song",
+    meta: "Description of the archive",
+    archive: "path/to/the/archive.zip",
+    completed: boolean
 }
 */
 
