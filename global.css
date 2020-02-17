@@ -6,8 +6,8 @@
 
 /* Mini-Reset */
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Global; applies to everything */
@@ -94,4 +94,32 @@ footer {
 /* Class for list items to not show bullet point */
 .nobullet {
     list-style-type: none;
+}
+
+/* Stuff related to song containers */
+.song {
+    overflow: hidden;
+}
+.song h3 {
+    margin-bottom: 2px;
+    font-size: x-large;
+}
+.song h4 {
+    margin-top: 2px;
+    font-weight: normal;
+    font-style: italic;
+}
+.song img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding: 20px;
+}
+.song button {
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: large;
 }
