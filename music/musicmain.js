@@ -62,7 +62,7 @@ function getSongContainer(obj) { // oh yeah we out here about to use jQuery like
     // Text
     let header = $("<h3 class=\"textcenter\">" + obj.name + "</h3>");
     let subheader = $("<h4 class=\"textcenter\">" + obj.origin + "</h4>");
-    let desc = $("<p>" + obj.desc + "</p>");
+    let desc = $("<p class=\"textcenter\">" + obj.desc + "</p>");
     container.append(header,subheader,desc);
     
     // Buttons
