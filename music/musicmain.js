@@ -30,19 +30,12 @@ Sample of intended HTML for each song container
 
 // ============================================================================
 
-$.get("musiclist.json",null,function(data) {
-    console.log(data);
-}, "json");
-
 // On ready
 $(document).ready(function() {
-    /*console.log("Running musicmain");
-    $.get("musiclist.json",null,function(data) {
-        console.log("wtf");
-        musicList = JSON.parse(data);
-        console.log(data);
+    console.log("Running musicmain");
+    $.get("musiclist.json",null,function(musicList) {
         
-        for (songObj of musicList) {
+        for (let songObj of musicList) {
             let container = getSongContainer(songObj);
             if (songObj.completed) {
                 $("#completed").append(container);
@@ -53,7 +46,7 @@ $(document).ready(function() {
         }
         
     }, "json");
-    console.log("Finished musicmain");*/
+    console.log("Finished musicmain");
 });
 
 // Construct the song container
