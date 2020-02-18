@@ -16,11 +16,13 @@ Template for one entry in musicList
     }
 
 Sample of intended HTML for each song container
-    <div class="song">
-        <img src="icon" alt="name"></img>
-        <h3 class="textcenter">name</h3>
-        <h4 class="textcenter">origin</h4>
-        <p>desc</p>
+    <div class="songContainer">
+        <div class="song">
+            <img src="icon" alt="name"></img>
+            <h3 class="textcenter">name</h3>
+            <h4 class="textcenter">origin</h4>
+            <p>desc</p>
+        </div>
         <div class="buttons">
             <button type="button">Download</button>
             <button type="button">Video</button>
@@ -52,18 +54,20 @@ $(document).ready(function() {
 // Construct the song container
 function getSongContainer(obj) { // oh yeah we out here about to use jQuery like a retard
     // Create container
-    let container = $("<div id=\"" + obj.name + "\" class=\"song\"></div>");
+    let container = $("<div id=\"" + obj.name + "\" class=\"songContainer\"></div>");
+    let song = $("<div class=\"song\"></div>");
     
     // Icon
     let iconImg = $("<img src=\"" + obj.icon + "\" alt=\""
         + obj.name + "\"></img>");
-    container.append(iconImg);
+    song.append(iconImg);
     
     // Text
     let header = $("<h3 class=\"textcenter\">" + obj.name + "</h3>");
     let subheader = $("<h4 class=\"textcenter\">" + obj.origin + "</h4>");
     let desc = $("<p class=\"textcenter\">" + obj.desc + "</p>");
-    container.append(header,subheader,desc);
+    song.append(header,subheader,desc);
+    container.append(song);
     
     // Buttons
     if (obj.completed) {

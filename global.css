@@ -115,11 +115,11 @@ footer {
     float: left;
     padding: 20px;
 }
-.song .buttons {
+.songContainer .buttons {
     margin-bottom: 20px;
     text-align: center; /* why the hell does this work */
 }
-.song button {
+.songContainer .buttons  button {
     display: inline;
     padding: 5px;
     margin: auto;

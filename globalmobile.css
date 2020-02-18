@@ -18,3 +18,18 @@ ul ul {
 ul ul ul {
     padding-left: 40px;
 }
+
+/* song containers */
+.song img {
+    width: 200px;
+    height: 200px;
+    float: none;
+    padding: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.song h3 {
+    margin-top: 2px;
+    font-size: x-large;
+}
