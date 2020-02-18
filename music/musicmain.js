@@ -35,7 +35,7 @@ Sample of intended HTML for each song container
 // On ready
 $(document).ready(function() {
     console.log("Running musicmain");
-    $.get("musiclist.json",null,function(musicList) {
+    $.get("/music/musiclist.json",null,function(musicList) {
         
         for (let songObj of musicList) {
             let container = getSongContainer(songObj);
