@@ -94,6 +94,10 @@ function loadContent() {
         if ($("#mailto").length) { // If it exists
             handleAddressMunging();
         }
+        // If on music page, run musicmain.js
+        if (currentPath.includes("music")) {
+            $.getScript("../music/musicmain.js");
+        }
     });
     // Load new title
     $("title").load(currentPath + " title", null, function() {
