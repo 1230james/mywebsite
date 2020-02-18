@@ -3,43 +3,57 @@
 
 // ============================================================================
 
-var musicList;
-$.get("musiclist.json",null,function(data) {
-    musicList = JSON.parse(data);
-}, "json");
-/* Template for one entry in musicList
-{
-    name: "Name of song",
-    origin: "Name of origin of song",
-    icon: "path/to/the/icon.png",
-    desc: "Description of the song",
-    archive: "path/to/the/archive.zip",
-    video: "url to video",
-    completed: boolean
-}
-*/
+/*
+Template for one entry in musicList
+    {
+        name: "Name of song",
+        origin: "Name of origin of song",
+        icon: "path/to/the/icon.png",
+        desc: "Description of the song",
+        archive: "path/to/the/archive.zip",
+        video: "url to video",
+        completed: boolean
+    }
 
-/* Sample of intended HTML for each song container
-<div class="song">
-    <img src="icon" alt="name"></img>
-    <h3 class="textcenter">name</h3>
-    <h4 class="textcenter">origin</h4>
-    <p>desc</p>
-    <div class="buttons">
-        <button type="button">Download</button>
-        <button type="button">Video</button>
+Sample of intended HTML for each song container
+    <div class="song">
+        <img src="icon" alt="name"></img>
+        <h3 class="textcenter">name</h3>
+        <h4 class="textcenter">origin</h4>
+        <p>desc</p>
+        <div class="buttons">
+            <button type="button">Download</button>
+            <button type="button">Video</button>
+        </div>
     </div>
-</div>
 */
 
 // ============================================================================
 
+$.get("musiclist.json",null,function(data) {
+    console.log(data);
+}, "json");
+
 // On ready
 $(document).ready(function() {
-    for (songObj of musicList) {
-        let container = getSongContainer(songObj);
-        addToTableOfContents(songObj);
-    }
+    /*console.log("Running musicmain");
+    $.get("musiclist.json",null,function(data) {
+        console.log("wtf");
+        musicList = JSON.parse(data);
+        console.log(data);
+        
+        for (songObj of musicList) {
+            let container = getSongContainer(songObj);
+            if (songObj.completed) {
+                $("#completed").append(container);
+            } else {
+                $("#inprogress").append(container);
+            }
+            addToTableOfContents(songObj);
+        }
+        
+    }, "json");
+    console.log("Finished musicmain");*/
 });
 
 // Construct the song container
@@ -80,8 +94,9 @@ function getSongContainer(obj) { // oh yeah we out here about to use jQuery like
 function addToTableOfContents(obj) {
     let anchor = "<a href=\"#" + obj.name + "\">" + obj.name + "</a>";
     let listObj = $("<li>" + anchor + "</li>");
-    if (obj.completed) 
+    if (obj.completed) {
         $("#completedList").append(listObj);
-    else
+    } else {
         $("#inProgressList").append(listObj);
+    }
 }
