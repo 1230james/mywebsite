@@ -95,7 +95,7 @@ function loadContent() {
             handleAddressMunging();
         }
         // If on music page, run musicmain.js
-        if (currentPath.includes("music")) {
+        if ($("#musicmain").length) {
             $.getScript("/music/musicmain.js");
         }
     });
