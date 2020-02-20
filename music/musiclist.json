@@ -20,6 +20,13 @@
         "archive": "",
         "video": "",
         "completed": false
+    }, {
+        "name": "Great Big Rollin' Railroad", "origin": "Union Pacific Railroad",
+        "icon": "/music/icons/gbrr.png",
+        "desc": "Written by C. W. McCall, this song was created for use in an advertising campaign by the UPRR in 1970. It was well-received by the railroad company, who proceeded to use it in all their TV commercials and in other events.<br/><br/>Art based on a <a href='https://commons.wikimedia.org/wiki/File:Union_Pacific_5304.jpg' rel='external'>photograph taken by Hellbus</a>, licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en' rel='external'>CC BY-SA 3.0</a>. Credit goes to the UPRR and C. W. McCall for the song.",
+        "archive": "",
+        "video": "",
+        "completed": false
     },
     
     
