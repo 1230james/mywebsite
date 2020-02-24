@@ -11,8 +11,8 @@
     <!--#include virtual="/headernav.html" -->
     
     <div id="content">
-        <h2 class="big textcenter">Welcome!</h2>
         <section>
+            <h2 class="big textcenter">Welcome!</h2>
             <p class="indent">Welcome to <b>1230james's Website</b>! My name is James Hyun, a college undergraduate majoring in computer science who likes to program and do some other niche things.</p>
             <p>This website is intended to serve as an online "portfolio" where I can show off the things I want to share to anyone who passes by, from online acquaintances to potential employers to family members.</p>
             <p>View the links in the navigation bar above to see and learn more about who I am and what I do.</p>
