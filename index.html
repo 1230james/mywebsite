@@ -52,7 +52,12 @@
         </section>
         
         <footer>
-            <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
+            <!--<p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.<br/>DEV MODE</em></small></p>-->
+            <!-- #if DOCUMENT_ROOT="/home/1230james/website" -->
+                <!-- #include virtual="/footer.html" -->
+            <!-- #else -->
+                <!-- #include virtual="/devfooter.html" -->
+            <!-- #endif -->
         </footer>
     </div>
 </body>
