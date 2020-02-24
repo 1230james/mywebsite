@@ -3,33 +3,12 @@
 
 <head>
     <title>1230james's Website - About Me</title>
-    <link rel="stylesheet" media="screen and (min-width: 761px)" type="text/css" href="/global.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 760px)" type="text/css" href="/globalmobile.css"/>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!-- Favicon info -->
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#ffffff"/>
+    <!--#include virtual="/headcommon.html" -->
 </head>
 
 <body>
-    <div id="headernav">
-        <header>
-            <h1>1230james's Website</h1>
-            <h2>By James Hyun</h2>
-        </header>
-
-        <nav id="navbar">
-            <script src="/navigation.js"></script>
-        </nav>
-    </div>
+    <!--#include virtual="/headernav.html" -->
     
     <div id="content">
         <h2 class="big textcenter">About Me</h2>
@@ -127,11 +106,15 @@
             <p class="indent">Currently, I'm an undergraduate student at the University of Georgia. My career goal is to either begin an indie game development career out of my Roblox game development venture or to obtain a software development position in a transportation-related field. I'm enthusiastic about my computer science education, and I look forward to learning more and working in software development internships to hone my skills.</p>
         </section>
         <!-- TODO: Other profiles, resume info -->
-        
-        <footer>
-            <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
-        </footer>
     </div>
+    
+    <footer>
+        <!--#if expr="%{DOCUMENT_ROOT} == '/home/1230james/website'" -->
+            <!--#include virtual="/footer.html" -->
+        <!--#else -->
+            <!--#include virtual="/devfooter.html" -->
+        <!--#endif -->
+    </footer>
 </body>
 
 </html>

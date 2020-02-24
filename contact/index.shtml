@@ -3,33 +3,11 @@
 
 <head>
     <title>1230james's Website - Contact Me</title>
-    <link rel="stylesheet" media="screen and (min-width: 761px)" type="text/css" href="/global.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 760px)" type="text/css" href="/globalmobile.css"/>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!-- Favicon info -->
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#ffffff"/>
-</head>
+    <!--#include virtual="/headcommon.html" -->
 
 <body>
-    <div id="headernav">
-        <header>
-            <h1>1230james's Website</h1>
-            <h2>By James Hyun</h2>
-        </header>
-
-        <nav id="navbar">
-            <script src="../navigation.js"></script>
-        </nav>
-    </div>
+    <!--#include virtual="/headernav.html" -->
     
     <div id="content">
         <section>
@@ -53,11 +31,15 @@
             <p>If, somehow, you have my telephone number (through my résumé, perhaps), then <strong>please refrain from attempting to contact me via voice unless it is absolutely urgent.</strong> I reject virtually every call.</p>
             <p>If you absolutely must contact me via phone, please keep calling multiple times in a row. If I notice that the same number is persistent on calling me, it will be proof to me that the 500 millionth robo-caller isn't the one trying to call me.</p>
         </section>
-        
-        <footer>
-            <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
-        </footer>
     </div>
+    
+    <footer>
+        <!--#if expr="%{DOCUMENT_ROOT} == '/home/1230james/website'" -->
+            <!--#include virtual="/footer.html" -->
+        <!--#else -->
+            <!--#include virtual="/devfooter.html" -->
+        <!--#endif -->
+    </footer>
 </body>
 
 </html>

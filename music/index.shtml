@@ -3,34 +3,13 @@
 
 <head>
     <title>1230james's Website - Sheet Music</title>
-    <link rel="stylesheet" media="screen and (min-width: 761px)" type="text/css" href="../global.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 760px)" type="text/css" href="../globalmobile.css"/>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--#include virtual="/headcommon.html" -->
     <script id="musicmain.js" src="musicmain.js"></script>
-    
-    <!-- Favicon info -->
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#ffffff"/>
 </head>
 
 <body>
-    <div id="headernav">
-        <header>
-            <h1>1230james's Website</h1>
-            <h2>By James Hyun</h2>
-        </header>
-
-        <nav id="navbar">
-            <script src="../navigation.js"></script>
-        </nav>
-    </div>
+    <!--#include virtual="/headernav.html" -->
     
     <div id="content">
         <h2 class="big textcenter">Sheet Music</h2>
@@ -60,11 +39,15 @@
             <h2 class="textcenter">Completed</h2>
             <p class="textcenter">Works that are completed and ready for viewing.</p>
         </section>
-        <footer>
-            <p id="musicmain" class="invis"> </p> <!-- for navigation.js -->
-            <p class="textcenter"><small><em>© 2019 - 2020 James "1230james" Hyun.</em></small></p>
-        </footer>
     </div>
+    
+    <footer>
+        <!--#if expr="%{DOCUMENT_ROOT} == '/home/1230james/website'" -->
+            <!--#include virtual="/footer.html" -->
+        <!--#else -->
+            <!--#include virtual="/devfooter.html" -->
+        <!--#endif -->
+    </footer>
 </body>
 
 </html>
