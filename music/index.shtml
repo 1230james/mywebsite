@@ -39,6 +39,7 @@
             <h2 class="textcenter">Completed</h2>
             <p class="textcenter">Works that are completed and ready for viewing.</p>
         </section>
+        <p id="musicmain" class="invis"> </p> <!-- for navigation.js; LEAVE THE SPACE IN THERE -->
     </div>
     
     <footer>
