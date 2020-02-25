@@ -12,10 +12,10 @@ const sep = "<b><b>|</b></b>";
 const navlinks = {
     "Home": "/",
     "About Me": "/about",
-    "Half Past Noon": "/hpn",
-    "Programming Projects": "/programming",
-    "Sheet Music": "/music",
-    "Contact": "/contact",
+    "Projects": "/projects",
+    "Code Samples": "/samples",
+    "Other": "/other",
+    "Contact": "/contact"
 }
 var debounce = false;
 var isUnloadAnimationPlaying = false;
