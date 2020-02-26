@@ -10,7 +10,7 @@
 <body>
     <!--#include virtual="/headernav.html" -->
     
-    <div id="content">      <!-- what time is it? it's -->
+    <div id="content">
         <h2 class="big textcenter">Sample Text</h2> 
         <section>
             <h2 class="textcenter">Sample Text</h2> 
