@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>1230james's Website - Home</title>
+    <title>1230james's Website - Sample Text</title>
     <meta charset="UTF-8"/>
     <!--#include virtual="/headcommon.html" -->
 </head>
@@ -27,7 +27,4 @@
     </footer>
 </body>
 
-
 </html>
-
-
